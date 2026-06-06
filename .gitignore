@@ -1,0 +1,36 @@
+# Dependencias
+node_modules/
+package.json
+package-lock.json
+
+# Archivos internos del proyecto (no van al repo público)
+CLAUDE.md
+*.pptx
+*.docx
+*.pdf
+*.zip
+logo_b64.txt
+build_plan.js
+build_presentation.js
+logo_tool.html
+unpacked_propuesta/
+Documentos/
+
+# Versiones anteriores de la landing
+landing_v1.html
+landing_v2.html
+landing_v3.html
+landing_v4.html
+
+# Imágenes originales no usadas en la web
+logo.jpg
+logo_400.png
+logo_angelina.jpg
+logo_hq.png
+logo_transparent.png
+angelina.jpg
+angelina_gray.jpg
+angelina_gray_transparent.png
+angelina_transparent.png
+Logotipo Angelina Alejo .jpg.jpeg
+angelina_pro.jpg
