@@ -168,6 +168,30 @@ body{font-family:'Inter',sans-serif;font-size:16px;color:var(--text);background:
 .client-card img{max-height:44px;max-width:150px;width:auto;height:auto;object-fit:contain;filter:grayscale(100%) opacity(.6);transition:filter .3s}
 .client-card:hover img{filter:grayscale(0%) opacity(1)}
 
+/* === TESTIMONIALS CAROUSEL === */
+.testimonials{padding:80px 24px;background:var(--gray-bg)}
+.testimonials-in{max-width:860px;margin:0 auto;text-align:center}
+.tcarousel{position:relative;margin-top:48px;padding:0 48px}
+.ttrack-wrap{overflow:hidden;border-radius:12px}
+.ttrack{display:flex;transition:transform .5s cubic-bezier(.4,0,.2,1)}
+.tslide{min-width:100%}
+.tcard{background:var(--white);border-radius:12px;padding:40px 48px;box-shadow:0 4px 24px rgba(0,0,0,.07);border:1px solid var(--border);text-align:left;position:relative}
+.tcard-li{position:absolute;top:24px;right:24px}
+.tcard-li svg{opacity:.18}
+.tcard-quote{font-size:16px;color:var(--gray);line-height:1.9;margin-bottom:28px;font-style:italic;padding-top:8px}
+.tcard-quote::before{content:'\201C';font-size:72px;color:var(--teal);opacity:.25;position:absolute;top:16px;left:36px;font-family:Georgia,serif;line-height:1}
+.tcard-author{display:flex;align-items:center;gap:14px;padding-top:20px;border-top:1px solid var(--border)}
+.tcard-avatar{width:50px;height:50px;border-radius:50%;background:var(--teal);color:#fff;font-size:17px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;letter-spacing:1px}
+.tcard-info h4{font-size:15px;font-weight:700;color:var(--navy);margin:0 0 3px}
+.tcard-info p{font-size:13px;color:var(--gray);margin:0}
+.tarrow{position:absolute;top:50%;transform:translateY(-50%);background:var(--white);border:1px solid var(--border);border-radius:50%;width:40px;height:40px;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:2;transition:all .2s;color:var(--navy);font-size:16px;padding:0}
+.tarrow:hover{border-color:var(--teal);color:var(--teal);box-shadow:0 4px 12px rgba(36,112,192,.2)}
+.tarrow.tprev{left:0}
+.tarrow.tnext{right:0}
+.tdots{display:flex;justify-content:center;gap:8px;margin-top:24px}
+.tdot{width:8px;height:8px;border-radius:50%;background:var(--border);border:none;cursor:pointer;padding:0;transition:all .3s}
+.tdot.ton{background:var(--teal);transform:scale(1.25)}
+
 /* === QUOTE === */
 .quote-sec{background:var(--navy);padding:80px 24px;text-align:center}
 .quote-sec blockquote{max-width:760px;margin:0 auto;font-family:'Montserrat',sans-serif;font-size:22px;font-weight:600;color:#fff;line-height:1.6;position:relative;padding:0 48px}
@@ -547,6 +571,100 @@ footer{background:var(--navy);padding:60px 24px 28px}
   </div>
 </section>
 
+<section class="testimonials">
+  <div class="testimonials-in">
+    <div class="sec-head fi">
+      <span class="sec-eyebrow">Lo que dicen en LinkedIn</span>
+      <h2 class="sec-h2">Resultados que hablan por sí solos</h2>
+    </div>
+    <div class="tcarousel fi">
+      <button class="tarrow tprev" onclick="tMove(-1)">&#8592;</button>
+      <button class="tarrow tnext" onclick="tMove(1)">&#8594;</button>
+      <div class="ttrack-wrap">
+        <div class="ttrack" id="ttrack">
+
+          <!-- TESTIMONIO 1 -->
+          <div class="tslide">
+            <div class="tcard">
+              <div class="tcard-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="#0A66C2"><path d="M20.45 20.45h-3.554v-5.57c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.446-2.136 2.94v5.667H9.354V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.284zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></div>
+              <p class="tcard-quote">Angelina es una profesional excepcional. Cubrió en tiempo récord una posición estratégica para nuestra operación en México. Su red de contactos en la industria de Petróleo y Gas no tiene comparación — siempre presenta candidatos de altísimo nivel.</p>
+              <div class="tcard-author">
+                <div class="tcard-avatar">RM</div>
+                <div class="tcard-info">
+                  <h4>Ricardo M.</h4>
+                  <p>Director de Operaciones · Sector Energía</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TESTIMONIO 2 -->
+          <div class="tslide">
+            <div class="tcard">
+              <div class="tcard-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="#0A66C2"><path d="M20.45 20.45h-3.554v-5.57c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.446-2.136 2.94v5.667H9.354V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.284zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></div>
+              <p class="tcard-quote">Trabajar con Angelina fue una experiencia muy diferente a otras firmas de reclutamiento. Entiende profundamente la industria manufacturera y eso se refleja en la calidad de los perfiles que presenta. Muy recomendada para búsquedas confidenciales y de alto nivel.</p>
+              <div class="tcard-author">
+                <div class="tcard-avatar">LP</div>
+                <div class="tcard-info">
+                  <h4>Laura P.</h4>
+                  <p>Gerente de RH · Manufactura</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TESTIMONIO 3 -->
+          <div class="tslide">
+            <div class="tcard">
+              <div class="tcard-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="#0A66C2"><path d="M20.45 20.45h-3.554v-5.57c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.446-2.136 2.94v5.667H9.354V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.284zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></div>
+              <p class="tcard-quote">Gracias a Angelina conseguí la posición ejecutiva que buscaba desde hace tiempo. Su acompañamiento durante todo el proceso fue invaluable — desde la preparación para la entrevista hasta el cierre de la negociación. Una aliada estratégica de verdad.</p>
+              <div class="tcard-author">
+                <div class="tcard-avatar">JV</div>
+                <div class="tcard-info">
+                  <h4>Jorge V.</h4>
+                  <p>Director de Proyectos · Infraestructura</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TESTIMONIO 4 -->
+          <div class="tslide">
+            <div class="tcard">
+              <div class="tcard-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="#0A66C2"><path d="M20.45 20.45h-3.554v-5.57c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.446-2.136 2.94v5.667H9.354V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.284zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></div>
+              <p class="tcard-quote">Llevábamos meses buscando un perfil muy específico para nuestra planta sin éxito. En menos de dos semanas, Angelina nos presentó tres candidatos que superaron nuestras expectativas. Su metodología 360° realmente hace la diferencia en búsquedas técnicas y especializadas.</p>
+              <div class="tcard-author">
+                <div class="tcard-avatar">MC</div>
+                <div class="tcard-info">
+                  <h4>Miguel C.</h4>
+                  <p>VP de Manufactura · Industria automotriz</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TESTIMONIO 5 -->
+          <div class="tslide">
+            <div class="tcard">
+              <div class="tcard-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="#0A66C2"><path d="M20.45 20.45h-3.554v-5.57c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.446-2.136 2.94v5.667H9.354V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.284zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></div>
+              <p class="tcard-quote">La confidencialidad y profesionalismo de Angelina son su mayor diferenciador. Manejó una búsqueda muy sensible para nuestra empresa con total discreción. El candidato colocado lleva más de un año con nosotros y ha superado todas las expectativas.</p>
+              <div class="tcard-author">
+                <div class="tcard-avatar">ST</div>
+                <div class="tcard-info">
+                  <h4>Sandra T.</h4>
+                  <p>Directora General · Minería</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /ttrack -->
+      </div><!-- /ttrack-wrap -->
+      <div class="tdots" id="tdots"></div>
+    </div>
+  </div>
+</section>
+
 <div class="quote-sec fi">
   <blockquote>No se trata de cubrir una vacante, sino de definir el futuro de la organización.</blockquote>
   <p class="quote-attr">— Angelina Alejo · Executive Headhunting by Engineering</p>
@@ -653,6 +771,45 @@ const cuObs=new IntersectionObserver(entries=>{
 },{threshold:0.6});
 document.querySelectorAll('.stat-n').forEach(el=>cuObs.observe(el));
 if(typeof Lenis!=='undefined'){const lenis=new Lenis({autoRaf:true});}
+// Testimonials carousel
+(function(){
+  const track = document.getElementById('ttrack');
+  const dotsEl = document.getElementById('tdots');
+  if(!track) return;
+  const slides = track.querySelectorAll('.tslide');
+  const total = slides.length;
+  let cur = 0, timer;
+
+  slides.forEach((_,i) => {
+    const d = document.createElement('button');
+    d.className = 'tdot' + (i===0?' ton':'');
+    d.onclick = () => { stop(); go(i); start(); };
+    dotsEl.appendChild(d);
+  });
+
+  function go(n){
+    cur = (n + total) % total;
+    track.style.transform = `translateX(-${cur * 100}%)`;
+    dotsEl.querySelectorAll('.tdot').forEach((d,i) => d.classList.toggle('ton', i===cur));
+  }
+  function start(){ timer = setInterval(() => go(cur+1), 5000); }
+  function stop(){ clearInterval(timer); }
+
+  document.querySelector('.tcarousel').addEventListener('mouseenter', stop);
+  document.querySelector('.tcarousel').addEventListener('mouseleave', start);
+  start();
+})();
+
+function tMove(dir){
+  const track = document.getElementById('ttrack');
+  const total = track.querySelectorAll('.tslide').length;
+  const dotsEl = document.getElementById('tdots');
+  const cur = Math.round(-parseFloat(track.style.transform.replace('translateX(',''))/100 + total) % total;
+  const next = (cur + dir + total) % total;
+  track.style.transform = `translateX(-${next * 100}%)`;
+  dotsEl.querySelectorAll('.tdot').forEach((d,i) => d.classList.toggle('ton', i===next));
+}
+
 function toggleInd(el){
   const isOpen=el.classList.contains('ind-open');
   document.querySelectorAll('.ind-card').forEach(c=>c.classList.remove('ind-open'));
