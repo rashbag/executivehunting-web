@@ -143,12 +143,21 @@ body{font-family:'Inter',sans-serif;font-size:16px;color:var(--text);background:
 .ind{padding:100px 24px;background:var(--gray-bg)}
 .ind-in{max-width:1100px;margin:0 auto}
 .ind-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px}
-.ind-card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:28px 20px;text-align:center;transition:all .3s;cursor:default}
+.ind-card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:28px 20px;text-align:center;transition:all .3s;cursor:pointer}
 .ind-card:hover{border-color:var(--teal);background:var(--teal-lt);transform:translateY(-3px)}
+.ind-card.ind-open{border-color:var(--teal);background:var(--teal-lt);transform:none}
+.ind-card.ind-open:hover{transform:none}
 .ind-icon{display:flex;align-items:center;justify-content:center;width:80px;height:80px;margin:0 auto 14px}
 .ind-icon img{width:100%;height:100%;object-fit:contain}
 .ind-name{font-size:13px;font-weight:600;color:var(--navy);transition:color .3s}
-.ind-card:hover .ind-name{color:var(--teal-dk)}
+.ind-card:hover .ind-name,.ind-card.ind-open .ind-name{color:var(--teal-dk)}
+.ind-arrow{font-size:10px;color:var(--teal);margin-top:6px;display:block;transition:transform .3s;user-select:none}
+.ind-card.ind-open .ind-arrow{transform:rotate(180deg)}
+.ind-detail{max-height:0;overflow:hidden;transition:max-height .4s ease;text-align:left}
+.ind-card.ind-open .ind-detail{max-height:220px}
+.ind-detail-title{font-size:10px;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:1px;margin:14px 0 8px;padding-top:14px;border-top:1px solid rgba(36,112,192,.2)}
+.ind-detail ul{margin:0;padding:0 0 0 14px}
+.ind-detail li{font-size:12px;color:var(--gray);line-height:1.8}
 
 /* === CLIENTS === */
 .clients{padding:80px 24px;background:var(--white)}
@@ -450,14 +459,70 @@ footer{background:var(--navy);padding:60px 24px 28px}
       <h2 class="sec-h2">Especialización en sectores técnicos</h2>
     </div>
     <div class="ind-grid">
-      <div class="ind-card fi"><span class="ind-icon"><img src="ind_petroleo.png" alt="Petróleo y Gas"></span><span class="ind-name">Petróleo y Gas</span></div>
-      <div class="ind-card fi"><span class="ind-icon"><img src="ind_manufactura.png" alt="Manufactura"></span><span class="ind-name">Manufactura</span></div>
-      <div class="ind-card fi"><span class="ind-icon"><img src="ind_energia.png" alt="Energía"></span><span class="ind-name">Energía</span></div>
-      <div class="ind-card fi"><span class="ind-icon"><img src="ind_infraestructura.png" alt="Infraestructura y Construcción"></span><span class="ind-name">Infraestructura y Construcción</span></div>
-      <div class="ind-card fi"><span class="ind-icon"><img src="ind_artesgraficas.png" alt="Artes Gráficas"></span><span class="ind-name">Artes Gráficas</span></div>
-      <div class="ind-card fi"><span class="ind-icon"><img src="ind_mineria.png" alt="Minería"></span><span class="ind-name">Minería</span></div>
-      <div class="ind-card fi"><span class="ind-icon"><img src="ind_tecnologia.png" alt="Tecnología"></span><span class="ind-name">Tecnología</span></div>
-      <div class="ind-card fi"><span class="ind-icon"><img src="ind_logistica.png" alt="Logística"></span><span class="ind-name">Logística</span></div>
+      <div class="ind-card fi" onclick="toggleInd(this)">
+        <span class="ind-icon"><img src="ind_petroleo.png" alt="Petróleo y Gas"></span>
+        <span class="ind-name">Petróleo y Gas</span>
+        <span class="ind-arrow">▼</span>
+        <div class="ind-detail">
+          <p class="ind-detail-title">Proyectos importantes</p>
+          <ul><li>Refinería de 2 Bocas</li><li>Reconfiguración Refinería de Tula</li><li>Reconfiguración Refinería de Salina Cruz</li></ul>
+        </div>
+      </div>
+      <div class="ind-card fi" onclick="toggleInd(this)">
+        <span class="ind-icon"><img src="ind_manufactura.png" alt="Manufactura"></span>
+        <span class="ind-name">Manufactura</span>
+        <span class="ind-arrow">▼</span>
+        <div class="ind-detail">
+          <p class="ind-detail-title">Proyectos importantes</p>
+          <ul><li>Iberia Food – Planta embotelladora de Bebidas</li><li>Arglass – Fabricación de envases de Vidrio</li><li>Good Pop – Fabricación de Helados</li></ul>
+        </div>
+      </div>
+      <div class="ind-card fi" onclick="toggleInd(this)">
+        <span class="ind-icon"><img src="ind_energia.png" alt="Energía"></span>
+        <span class="ind-name">Energía</span>
+        <span class="ind-arrow">▼</span>
+        <div class="ind-detail">
+          <p class="ind-detail-title">Proyectos importantes</p>
+          <ul><li>Fotovoltaico – Aguascalientes Sur I</li><li>Central Ciclo Combinado – Centro Morelos</li><li>Central de Ciclo Combinado Tuxpan</li></ul>
+        </div>
+      </div>
+      <div class="ind-card fi" onclick="toggleInd(this)">
+        <span class="ind-icon"><img src="ind_infraestructura.png" alt="Infraestructura y Construcción"></span>
+        <span class="ind-name">Infraestructura y Construcción</span>
+        <span class="ind-arrow">▼</span>
+        <div class="ind-detail">
+          <p class="ind-detail-title">Proyectos importantes</p>
+          <ul><li>Refinería de 2 Bocas</li><li>Parque Aztlán</li><li>Tren Maya</li><li>Ampliación del Metro de Guadalajara</li></ul>
+        </div>
+      </div>
+      <div class="ind-card fi" onclick="toggleInd(this)">
+        <span class="ind-icon"><img src="ind_artesgraficas.png" alt="Artes Gráficas"></span>
+        <span class="ind-name">Artes Gráficas</span>
+        <span class="ind-arrow">▼</span>
+        <div class="ind-detail">
+          <p class="ind-detail-title">Especialidades</p>
+          <ul><li>Empaque Plegadizo</li><li>Empaque Flexible</li></ul>
+        </div>
+      </div>
+      <div class="ind-card fi" onclick="toggleInd(this)">
+        <span class="ind-icon"><img src="ind_mineria.png" alt="Minería"></span>
+        <span class="ind-name">Minería</span>
+        <span class="ind-arrow">▼</span>
+        <div class="ind-detail">
+          <p class="ind-detail-title">Proyectos importantes</p>
+          <ul><li>Minera La Negra</li><li>Ampliación de Laminador en Caliente</li></ul>
+        </div>
+      </div>
+      <div class="ind-card fi" onclick="toggleInd(this)">
+        <span class="ind-icon"><img src="ind_tecnologia.png" alt="Tecnología"></span>
+        <span class="ind-name">Tecnología</span>
+        <span class="ind-arrow">▼</span>
+        <div class="ind-detail">
+          <p class="ind-detail-title">Proyectos importantes</p>
+          <ul><li>Soporte Técnico Bilingüe</li><li>Desarrollo SAP</li><li>Desarrollo de Software (Back y Front End)</li></ul>
+        </div>
+      </div>
+    </div>
     </div>
   </div>
 </section>
@@ -588,6 +653,11 @@ const cuObs=new IntersectionObserver(entries=>{
 },{threshold:0.6});
 document.querySelectorAll('.stat-n').forEach(el=>cuObs.observe(el));
 if(typeof Lenis!=='undefined'){const lenis=new Lenis({autoRaf:true});}
+function toggleInd(el){
+  const isOpen=el.classList.contains('ind-open');
+  document.querySelectorAll('.ind-card').forEach(c=>c.classList.remove('ind-open'));
+  if(!isOpen) el.classList.add('ind-open');
+}
 </script>
 </body>
 </html>
