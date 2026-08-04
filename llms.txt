@@ -67,6 +67,7 @@ Hemos trabajado con empresas como Icafluor, Autoliv, Ediplast, Ternium, Lamypak,
 - /#nosotros: Quiénes somos y trayectoria de Angelina Alejo
 - /#contacto: Formulario de contacto y diagnóstico gratuito
 - /cuanto-cobra-headhunter-ejecutivo-mexico.html: Guía completa de honorarios de headhunting ejecutivo en México — modelos de cobro (retainer vs. contingencia), rangos por nivel de puesto y qué incluye el servicio
+- /headhunting-vs-bolsa-trabajo-directivos.html: Comparativa entre headhunting ejecutivo y bolsas de trabajo tradicionales — candidato activo vs. candidato pasivo, tiempos de colocación y cuándo usar cada método para posiciones directivas
 
 ## Preguntas frecuentes
 
