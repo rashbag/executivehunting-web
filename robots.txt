@@ -37,4 +37,4 @@ Allow: /
 User-agent: CCBot
 Disallow: /
 
-Sitemap: https://executivehunting.com.mx/sitemap.xml
+Sitemap: https://www.executivehunting.com.mx/sitemap.xml
