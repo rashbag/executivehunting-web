@@ -9,6 +9,14 @@
   gtag('js', new Date());
 
   gtag('config', 'G-DL8BQN1W2X');
+  // Conversiones: envio de formulario (FormSubmit regresa con ?gracias=1) y clics de contacto
+  if(/[?&]gracias=1/.test(location.search))gtag('event','generate_lead',{method:'formulario'});
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.href;
+    if(h.indexOf('wa.me/')>-1)gtag('event','contact_whatsapp',{link_url:h});
+    else if(h.indexOf('mailto:')===0)gtag('event','contact_email',{link_url:h});
+    else if(h.indexOf('idtalento.net')>-1)gtag('event','click_ofertas_empleo',{link_url:h});
+  });
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -981,7 +989,7 @@ footer{background:var(--navy);padding:60px 24px 28px}
 document.getElementById('hb').addEventListener('click',()=>document.getElementById('mm').classList.toggle('open'));
 const obs=new IntersectionObserver(e=>e.forEach(i=>{if(i.isIntersecting)i.target.classList.add('vis')}),{threshold:0.1});
 document.querySelectorAll('.fi').forEach(el=>obs.observe(el));
-if(location.search.includes('gracias=1'))document.getElementById('sb').classList.add('show');
+if(location.search.includes('gracias=1')){document.getElementById('sb').classList.add('show');history.replaceState(null,'',location.pathname+location.hash);}
 const navEl=document.querySelector('.nav');
 window.addEventListener('scroll',()=>{navEl.style.boxShadow=window.scrollY>20?'0 4px 20px rgba(0,0,0,.12)':''});
 const cuObs=new IntersectionObserver(entries=>{
