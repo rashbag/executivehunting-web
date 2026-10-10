@@ -1,0 +1,9 @@
+// Sitio estático servido con Cloudflare Workers (static assets).
+// Las URLs van sin .html: Cloudflare sirve /pagina desde pagina.html.
+{
+  "name": "executivehunting-web",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "."
+  }
+}

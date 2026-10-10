@@ -1,0 +1,4 @@
+# Redirect permanente de las URLs viejas con .html (Cloudflare por default usa 307)
+/index.html / 301
+/cuanto-cobra-headhunter-ejecutivo-mexico.html /cuanto-cobra-headhunter-ejecutivo-mexico 301
+/headhunting-vs-bolsa-trabajo-directivos.html /headhunting-vs-bolsa-trabajo-directivos 301
