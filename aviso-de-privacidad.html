@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DL8BQN1W2X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DL8BQN1W2X');
+  // Conversiones: envio de formulario (FormSubmit regresa con ?gracias=1) y clics de contacto
+  if(/[?&]gracias=1/.test(location.search))gtag('event','generate_lead',{method:'formulario'});
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.href;
+    if(h.indexOf('wa.me/')>-1)gtag('event','contact_whatsapp',{link_url:h});
+    else if(h.indexOf('mailto:')===0)gtag('event','contact_email',{link_url:h});
+    else if(h.indexOf('idtalento.net')>-1)gtag('event','click_ofertas_empleo',{link_url:h});
+  });
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aviso de Privacidad | Executive Headhunting by Engineering</title>
+<meta name="description" content="Aviso de privacidad integral de Executive Headhunting by Engineering: qué datos personales tratamos, para qué, con quién los compartimos y cómo ejercer sus derechos ARCO.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.executivehunting.com.mx/aviso-de-privacidad">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="shortcut icon" href="favicon.ico">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#2470C0; --teal-dk:#1A5096; --teal-lt:#EBF3FD;
+  --navy:#1A2B3C; --white:#fff; --gray-bg:#F5F7F9; --gray-lt:#EFF1F3;
+  --text:#2C3E50; --gray:#6B7A8D; --border:#DDE3EA;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;font-size:16px;color:var(--text);background:var(--white);line-height:1.7}
+
+.nav{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:200;box-shadow:0 2px 12px rgba(0,0,0,.07)}
+.nav-inner{max-width:1000px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:90px}
+.nav-logo img{height:64px;display:block}
+.btn-teal{background:var(--teal);color:#fff;font-family:'Inter',sans-serif;font-weight:600;font-size:13px;padding:10px 22px;text-decoration:none;border-radius:4px;transition:background .25s;white-space:nowrap}
+.btn-teal:hover{background:var(--teal-dk)}
+
+.wrap{max-width:760px;margin:0 auto;padding:64px 24px}
+.eyebrow{font-size:12px;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:3px;margin-bottom:14px;display:block}
+h1{font-family:'Montserrat',sans-serif;font-size:2.2rem;font-weight:800;color:var(--navy);line-height:1.25;margin-bottom:18px}
+.meta{color:var(--gray);font-size:14px;margin-bottom:40px;padding-bottom:32px;border-bottom:1px solid var(--border)}
+.lead{font-size:19px;color:var(--text);font-weight:500;margin-bottom:36px;line-height:1.75}
+h2{font-family:'Montserrat',sans-serif;font-size:1.5rem;font-weight:700;color:var(--navy);margin:44px 0 16px}
+h3{font-family:'Montserrat',sans-serif;font-size:1.15rem;font-weight:700;color:var(--navy);margin:28px 0 12px}
+p{margin-bottom:18px;color:var(--text)}
+ul,ol{margin:0 0 18px 22px}
+li{margin-bottom:8px}
+strong{color:var(--navy)}
+
+table{width:100%;border-collapse:collapse;margin:16px 0 28px;font-size:15px}
+th,td{border:1px solid var(--border);padding:12px 14px;text-align:left;vertical-align:top}
+th{background:var(--navy);color:#fff;font-family:'Montserrat',sans-serif;font-weight:700;font-size:13px}
+tr:nth-child(even) td{background:var(--gray-bg)}
+.check{list-style:none;margin-left:0}
+.check li{padding-left:28px;position:relative}
+.check li::before{content:"☐";position:absolute;left:0;color:var(--teal);font-size:18px;line-height:1.4}
+
+footer{background:var(--navy);padding:40px 24px;text-align:center}
+footer p{color:rgba(255,255,255,.6);font-size:13px;margin-bottom:6px}
+footer a{color:var(--teal-lt);text-decoration:none}
+
+@media(max-width:600px){h1{font-size:1.7rem}.wrap{padding:40px 20px}table{font-size:14px}th,td{padding:10px}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo"><img src="logo_v2.png" alt="Executive Headhunting"></a>
+    <a href="/#contacto" class="btn-teal">Agenda una Sesión</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <span class="eyebrow">Legal</span>
+  <h1>Aviso de Privacidad Integral</h1>
+  <p class="meta">Executive Headhunting by Engineering · Última actualización: <time datetime="2026-10-12">12 de octubre de 2026</time></p>
+
+  <h2>1. Identidad y domicilio del responsable</h2>
+  <p><strong>Angelina Alejo Sánchez</strong>, quien opera comercialmente como "Executive Headhunting by Engineering" (en adelante, "Executive Headhunting"), con domicilio en Av. Aquiles Serdán, Edificio 11, Depto. 601, Alcaldía Azcapotzalco, C.P. 02450, Ciudad de México, México, es responsable del tratamiento de sus datos personales, en términos de la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (la "Ley").</p>
+  <p>Para cualquier asunto relacionado con sus datos personales puede escribirnos a <a href="mailto:angelina@executivehunting.com.mx">angelina@executivehunting.com.mx</a>.</p>
+
+  <h2>2. Datos personales que tratamos</h2>
+  <h3>a) Empresas y prospectos</h3>
+  <p>A través del formulario de contacto del sitio web, correo electrónico, WhatsApp o en reuniones: nombre, empresa, cargo, correo electrónico, teléfono, el tipo de solicitud y la información que usted nos comparta sobre su necesidad de contratación.</p>
+  <h3>b) Candidatos</h3>
+  <p>Datos de identificación y contacto; la información contenida en su currículum (formación académica, trayectoria laboral, habilidades, idiomas y certificaciones); sueldo y prestaciones actuales y expectativas económicas; referencias laborales; y los resultados de entrevistas y evaluaciones psicométricas o de competencias.</p>
+  <h3>c) Datos de navegación en el sitio web</h3>
+  <p>Ver la sección 8 (cookies y tecnologías de rastreo).</p>
+  <h3>Datos personales sensibles</h3>
+  <p>Executive Headhunting no solicita datos personales sensibles, como estado de salud, origen étnico o racial, creencias religiosas, filosóficas o morales, afiliación sindical, opiniones políticas o preferencia sexual. Le pedimos no incluirlos en su currículum. Las evaluaciones psicométricas se realizan en la plataforma ID Talento, donde se le presenta el aviso de privacidad y se recaba su aceptación.</p>
+  <h3>Datos de terceros</h3>
+  <p>Si usted nos proporciona datos de terceros (por ejemplo, de sus referencias laborales), declara que cuenta con su consentimiento para hacerlo.</p>
+
+  <h2>3. Finalidades del tratamiento</h2>
+  <h3>Finalidades primarias (necesarias para la relación con usted)</h3>
+  <ul>
+    <li>Atender sus solicitudes de información, cotización y contacto.</li>
+    <li>Prestar los servicios de búsqueda y selección de personal ejecutivo (headhunting), evaluación de currículum, evaluación psicométrica y capacitación.</li>
+    <li>Evaluar el perfil de los candidatos y presentarlos a empresas clientes para vacantes específicas.</li>
+    <li>Dar seguimiento a los procesos de selección y verificar referencias laborales.</li>
+    <li>Celebrar y cumplir los contratos de servicio con empresas clientes, así como facturar y cobrar.</li>
+    <li>Cumplir las obligaciones legales aplicables.</li>
+  </ul>
+  <h3>Finalidades secundarias (no son necesarias; puede negarse)</h3>
+  <ul>
+    <li>Enviarle información sobre nuestros servicios, artículos y contenido de interés profesional.</li>
+    <li>Conservar el perfil de los candidatos en nuestra base de datos para considerarlos en vacantes futuras.</li>
+    <li>Elaborar estadísticas para mejorar el sitio web y nuestros servicios.</li>
+  </ul>
+  <p>Si no desea que sus datos se usen para alguna finalidad secundaria, puede indicarlo en cualquier momento escribiendo a <a href="mailto:angelina@executivehunting.com.mx">angelina@executivehunting.com.mx</a> con el asunto "Finalidades secundarias". Su negativa no será motivo para negarle los servicios que solicite.</p>
+
+  <h2>4. Transferencias de datos</h2>
+  <p>Para cumplir la finalidad principal del servicio de reclutamiento, los datos de los candidatos (currículum, resultados de evaluación y expectativas económicas) podrán transferirse a empresas clientes ubicadas en México y en el extranjero que tengan una vacante para la que usted sea considerado, con el único fin de que evalúen su candidatura. Antes de presentar su perfil a una empresa, le informaremos de qué empresa se trata y el proceso en el que se encontrará participando.</p>
+  <p>Esta transferencia requiere su consentimiento. Al compartirnos su currículum, le pediremos que nos indique:</p>
+  <ul class="check">
+    <li>Acepto que mis datos sean transferidos a empresas clientes de Executive Headhunting para los fines descritos.</li>
+    <li>No acepto que mis datos sean transferidos.</li>
+  </ul>
+  <p>Además, sus datos podrán ser comunicados a autoridades competentes cuando exista un requerimiento legal, supuesto en el que la Ley no exige su consentimiento.</p>
+
+  <h2>5. Proveedores que nos apoyan</h2>
+  <p>Para operar, Executive Headhunting se apoya en proveedores de servicios (encargados) que tratan datos únicamente por cuenta nuestra y para prestarnos su servicio:</p>
+  <table>
+    <thead><tr><th>Proveedor</th><th>Para qué lo usamos</th></tr></thead>
+    <tbody>
+      <tr><td>Google Workspace</td><td>Correo electrónico y almacenamiento de documentos</td></tr>
+      <tr><td>FormSubmit</td><td>Envío al correo de los mensajes del formulario de contacto del sitio</td></tr>
+      <tr><td>Cloudflare</td><td>Hospedaje, seguridad y medición agregada de visitas del sitio web</td></tr>
+      <tr><td>Google Analytics y PostHog</td><td>Analítica de uso del sitio web (ver sección 8)</td></tr>
+      <tr><td>WhatsApp (Meta)</td><td>Mensajería con empresas y candidatos que nos contactan por ese medio</td></tr>
+      <tr><td>ID Talento (ATS)</td><td>Gestión, almacenamiento y seguimiento de candidaturas, vacantes y procesos de reclutamiento y selección</td></tr>
+    </tbody>
+  </table>
+
+  <h2>6. Derechos ARCO y revocación del consentimiento</h2>
+  <p>Usted tiene derecho a <strong>A</strong>cceder a sus datos personales, <strong>R</strong>ectificarlos si son inexactos o incompletos, <strong>C</strong>ancelarlos cuando considere que no se requieren para alguna de las finalidades señaladas, y <strong>O</strong>ponerse a su tratamiento para fines específicos (derechos ARCO). También puede revocar el consentimiento que nos haya otorgado.</p>
+  <p>Para ejercer cualquiera de estos derechos, envíe una solicitud a <a href="mailto:angelina@executivehunting.com.mx">angelina@executivehunting.com.mx</a> que incluya:</p>
+  <ul>
+    <li>Su nombre y el medio para comunicarle la respuesta.</li>
+    <li>Un documento que acredite su identidad o, en su caso, la de su representante legal.</li>
+    <li>La descripción clara de los datos personales y del derecho que desea ejercer.</li>
+    <li>Cualquier otro elemento que facilite la localización de sus datos.</li>
+  </ul>
+  <p>Le responderemos por el mismo medio, dentro de los plazos que establece la Ley. La revocación del consentimiento podría no proceder en los casos en que debamos seguir tratando sus datos por una obligación legal.</p>
+
+  <h2>7. Opciones para limitar el uso o divulgación de sus datos</h2>
+  <p>Además del procedimiento anterior, puede inscribirse en el Registro Público para Evitar Publicidad (REPEP) de la Procuraduría Federal del Consumidor, para no recibir publicidad por teléfono.</p>
+
+  <h2>8. Cookies y tecnologías de rastreo</h2>
+  <p>Nuestro sitio web utiliza las siguientes herramientas para conocer cómo se usa y mejorarlo:</p>
+  <ul>
+    <li><strong>Google Analytics</strong> (usa cookies): páginas visitadas, tiempo de permanencia, sitio o búsqueda de origen, tipo de dispositivo y navegador, ubicación aproximada (ciudad o país) y acciones como el envío del formulario o el clic en el botón de WhatsApp.</li>
+    <li><strong>PostHog</strong> (usa cookies): analítica de navegación y uso del sitio, de forma similar a la anterior.</li>
+    <li><strong>Cloudflare Web Analytics</strong> (no usa cookies): conteo agregado de visitas, páginas y país de origen.</li>
+  </ul>
+  <p>Estas herramientas pueden registrar su dirección IP para estimar la ubicación aproximada. No grabamos sesiones de navegación ni usamos su información para publicidad personalizada. Puede deshabilitar o eliminar las cookies desde la configuración de su navegador; el sitio seguirá funcionando normalmente.</p>
+  <p>El botón "Ofertas de Empleo" lleva a idtalento.net, la plataforma (ATS) que usamos para gestionar vacantes y candidaturas; ahí se le presenta el aviso de privacidad correspondiente.</p>
+
+  <h2>9. Conservación de los datos</h2>
+  <p>Conservaremos sus datos solo durante el tiempo necesario para las finalidades descritas. Los datos de candidatos se conservarán hasta por 3 años a partir del último contacto, salvo que usted solicite antes su cancelación. Después se eliminarán de forma segura.</p>
+
+  <h2>10. Cambios al aviso de privacidad</h2>
+  <p>Cualquier cambio a este aviso de privacidad se publicará en <a href="/aviso-de-privacidad">www.executivehunting.com.mx/aviso-de-privacidad</a>, con la fecha de su última actualización.</p>
+
+  <h2>11. Autoridad</h2>
+  <p>Si considera que su derecho a la protección de datos personales ha sido lesionado, puede acudir ante la Secretaría Anticorrupción y Buen Gobierno, autoridad competente en materia de protección de datos personales en posesión de los particulares.</p>
+</main>
+
+<footer>
+  <p>© 2026 Executive Headhunting by Engineering · Angelina Alejo · CDMX</p>
+  <p><a href="/">Volver al sitio principal</a> · <a href="/aviso-de-privacidad">Aviso de Privacidad</a></p>
+</footer>
+
+</body>
+</html>
